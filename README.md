@@ -1,7 +1,7 @@
 
 # 🛩️  Quadcopter Using ESP32-CAM, Coreless Motors, and MPU6050
 
-This project is a fully functional **quadcopter drone** controlled by a custom-built transmitter using another **ESP32 board**. The drone features four **coreless brushed motors** driven by **MOSFETs**, real-time orientation sensing via **MPU6050 (6-DOF)** IMU, and full control via **Wi-Fi UDP packets**—with no need for commercial radio controllers or NRF24 modules.
+This project is a fully functional **quadcopter drone** controlled by a custom-built transmitter using another **ESP32 board**. The drone features four **coreless brushed motors** driven by **MOSFETs**, real-time orientation sensing via **MPU6050 (6-DOF)** IMU, and full control via **Wi-Fi UDP packets** , **NRF24 module** or **Bluetooth**.
 
 It serves as a brilliant demonstration of wireless communication, embedded control, and multi-motor synchronization using simple and cost-effective components.
 
@@ -9,7 +9,7 @@ It serves as a brilliant demonstration of wireless communication, embedded contr
 
 ## 🧠 Project Overview
 
-The drone is powered by an **ESP32-CAM**, which controls four motors through MOSFETs based on real-time orientation and joystick commands sent over Wi-Fi from a hand-held ESP32-based transmitter. The MPU6050 IMU provides orientation feedback, enabling future stabilization and auto-leveling features. This project replaces traditional radio modules with **UDP-based wireless control**—a cleaner, faster, and more modern alternative.
+The drone is powered by an **ESP32-CAM**, which controls four motors through MOSFETs based on real-time orientation and joystick commands sent over Wi-Fi from a hand-held ESP32-based transmitter. The MPU6050 IMU provides orientation feedback, enabling future stabilization and auto-leveling features. 
 
 The transmitter features two joysticks (4 axes), and its input is transmitted over UDP at regular intervals. The receiver decodes the values and maps them to motor PWM duty cycles for flight control.
 
@@ -123,9 +123,9 @@ This project is versatile and can easily be switched between these modes by chan
 ## 🛠️ Working Principle
 
 * Each joystick axis sends one byte (0–255) representing a control value (e.g., throttle, pitch).
-* On the drone, the ESP32-CAM reads these values via Wi-Fi UDP, then converts them to PWM outputs.
+* On the drone, the ESP32-CAM reads these values then converts them to PWM outputs.
 * The motors are controlled via MOSFETs, with each motor driving a corner of the drone.
-* The MPU6050 can be used for orientation correction and stabilization (currently optional).
+* The MPU6050 can be used for orientation correction and stabilization.
 
 ---
 
