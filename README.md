@@ -1,5 +1,5 @@
 
-# 🛩️  Quadcopter Using ESP32-CAM, Coreless Motors, and MPU6050
+# 🛩️  Quadcopter Using ESP32, Coreless Motors, and MPU6050
 
 This project is a fully functional **quadcopter drone** controlled by a custom-built transmitter using another **ESP32 board**. The drone features four **coreless brushed motors** driven by **MOSFETs**, real-time orientation sensing via **MPU6050 (6-DOF)** IMU, and full control via **Wi-Fi UDP packets** , **NRF24 module** or **Bluetooth**.
 
